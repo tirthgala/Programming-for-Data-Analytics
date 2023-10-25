@@ -1,0 +1,49 @@
+---
+title: "Assignment 9"
+author: "NAME, NetID"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+*This is an **individual** assignment.*
+
+The objective of this assignment is to give you experience composing programs in R.
+
+Please meet the specific requirements exactly. Do not change or remove any of the instructions; just add you name and NetID in the author metadata area above and code in the two code cells as indicated.  Please make sure to test your programs before submitting your solutions on Canvas!
+
+## Problem 1: Merging data
+
+In Assignment 6, Problem 2, you were asked merge sales and product data and calculate a new `sales` column.  Your task now is to repeat that manipulation in R using the base `merge` method.  Other methods that may be useful include `as.numeric` and `gsub`.  Your code should load data locally from `sales.csv` and `products.csv` and output the resulting data frame to `sales_and_products.csv`.  The first two lines of the output file should look as follows.
+
+
+```
+product.id,product.title,region,quantity,price,brand,sales                      
+1564518124,Carson Dellosa Ideal School Supply Pattern Blocks Stickers (1564518124),53,667,12.48,Carson-Dellosa,8324.16
+```
+
+```{r problem1}
+# TODO: Insert your code here.
+```
+
+
+## Problem 2: Reshaping Salesperson Data
+
+You have three types of salesperson data every month: number of hours worked (`Salesperson_hours.csv`), number of items sold (`Salesperson_items.csv`), and a dollar amount for sales (`Salesperson_sales.csv`).  You want to combine this information into a single long format and write this combined data out to `Salesperson_long.csv`; the first lines of the resulting file should be as follows.
+
+```
+Sales.Associate,Location,Month,Hours,Items,Sales
+Alicia,Hillsborough,Apr,61,11,17
+Alicia,Hillsborough,Aug,56,5,1
+Alicia,Hillsborough,Dec,67,22,157
+Alicia,Hillsborough,Feb,77,16,166
+```
+
+```{r problem2}
+# TODO: Insert your code here.
+```

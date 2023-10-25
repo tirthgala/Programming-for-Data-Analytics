@@ -1,0 +1,81 @@
+---
+title: "Assignment 8"
+author: "NAME, NetID"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+*This is an **individual** assignment.*
+
+The objective of this assignment is to give you experience composing programs in R.
+
+Please meet the specific requirements exactly. Do not change or remove any of the instructions; just add you name and NetID in the author metadata area above and code in the code cells as indicated.  Please make sure to test your programs before submitting your solutions on Canvas!
+
+## Problem 1: Employee Salary Analysis
+
+The file `employee_data.csv` contains employee data (excluding executives) for a non-profit trade association; the first five lines of this file are shown below.  Please use this data to answer the following questions.
+
+```
+Name,Salary,Department
+Angela Coston,108300,Finance
+Jerome Vinson,172900,Economics and Strategic Planning
+Jamar Southerland,158800,Legal
+Tom Banks,150500,Governmental Affairs
+```
+
+**What are the lowest and highest salaries?**
+
+```{r problem1a}
+# TODO: Insert your code here.
+```
+
+**What is the mean salary for employees in the Operations department?**
+
+```{r problem1b}
+# TODO: Insert your code here.
+```
+
+**Who has is the highest salary for employees in the Legal department?**
+
+```{r problem1c}
+# TODO: Insert your code here.
+```
+
+**How many employees have a salary under 80,000?**
+
+```{r problem1d}
+# TODO: Insert your code here.
+```
+
+The company is considering merging the "Product Development" and "Sales" departments into a single department.  Assuming there are no layoffs or additional hires as part of this process, **how many employees would there be in this new combined department?**
+
+```{r problem1e}
+# TODO: Insert your code here.
+```
+
+## Problem 2: Cutting, or binning data
+
+In Assignment 6, Problem 1, you were given code to add a new `age.group` column to a data frame of customer information. Your task now is to repeat that manipulation in R using the base `cut` method.  Your code should load data locally from `customers.csv` and output the resulting data frame to `customers_age_groups.csv`.  The first ten lines of the output file should look as follows.
+
+```
+customer.id,customer.name,age,gender,age.group
+1,Rick Hill,45,male,35-54
+2,Don Baum,35,male,35-54
+3,Thomas Anderson,47,male,35-54
+4,Douglas Gaffney,42,male,35-54
+5,Crystal Auten,33,female,18-34
+6,John Canty,43,male,35-54
+7,Pauline Mullan,45,female,35-54
+8,Edward Hall,36,male,35-54
+9,Ebony Blackburn,48,female,35-54
+```
+
+```{r problem2}
+# TODO: Insert your code here.
+```

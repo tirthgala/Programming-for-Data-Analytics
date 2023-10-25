@@ -1,0 +1,91 @@
+---
+title: "Assignment 10"
+author: "NAME, NetID"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+*This is an **individual** assignment.*
+
+The objective of this assignment is to give you experience composing programs in R with an emphasis on using Tidyverse packages.
+
+Please meet the specific requirements exactly. Do not change or remove any of the instructions; just add you name and NetID in the author metadata area above and code in the code cells as indicated (you may edit/remove the "TODO" comments).  Please make sure to test your programs before submitting your solutions on Canvas!
+
+## Problem 1: Marketing Campaign Analysis
+
+The file `marketing_campaigns.csv` contains data about a series of marketing campaigns; the first five lines of the file are shown below.
+
+```
+Date,Campaign,Impressions,Clicks
+2023-03-31,Campaign A,647,14
+2023-04-01,Campaign A,639,11
+2023-04-02,Campaign A,532,14
+2023-04-03,Campaign A,487,8
+```
+
+First, load the tidyverse package and the data.
+
+```{r problem1a}
+# TODO: Insert your code here
+```
+Next, calculate CTR using the Tidyverse `mutate` method.
+
+```{r problem1b}
+# TODO: Calculate CTR
+```
+
+Finally, use the tidyverse methods `group_by`, `summarize`, and `filter` to produce an Nx2 tibble of all the campaigns with an average CTR > 0.02.  Your output should have the following format (with the ?'s being replaced with letters for the campaigns and numbers elsewhere).  You don't need to write this out to a file; just print it out in your R Markdown output.
+
+```
+## # A tibble: ? × 2
+##   Campaign   avg_CTR
+##   <chr>        <dbl>
+## 1 Campaign ?  0.0???
+## 2 Campaign ?  0.0???
+##       ...
+```
+
+```{r problem1c}
+# TODO: Filter campaigns with CTR > 0.02
+```
+
+
+## Problem 2: Manipulating Product Data
+
+You have a product data `products.csv` with the following columns: `Item`, `Retail.Price` and `Unit.Cost`; first, load this data.
+
+```{r problem2a}
+# TODO: Load the data
+```
+
+Now use the `mutate` method to create a new column `Margin` using the formula Margin = (Retail.Price - Unit.Cost) / Retail.Price).
+
+```{r problem2b}
+# TODO: Calculate Margin
+```
+
+Use the `separate` method to separate the "Item" column into "Item" and "Category" columns using the space-padded hyphen as a separator (`" - "`).
+
+```{r problem2c}
+# TODO: Separate Item into Item and Category
+```
+
+Finally, calculate the average Margin for each Category and write the resulting data out to `avg_margin_by_category.csv`.  The first five lines of this file should appear as follows.
+
+```
+Category,avg_Margin
+Backpacks,0.152980205100494
+Belt Buckles,0.17708841870366
+Belts,0.159983304991489
+Boots,0.157098313776764
+```
+
+```{r problem2d}
+# TODO: Calculate average Margin per Category and write out to avg_margin_by_category.csv
+```
